@@ -1,0 +1,29 @@
+---
+galaxy_info:
+  author: SOSETH
+  description: See README.md
+  company: sos.ethz.ch
+  # issue_tracker_url: 
+  license: All rights reserved.
+  min_ansible_version: 1.9.1
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+  categories:
+    #- cloud
+    #- cloud:ec2
+    #- cloud:gce
+    #- cloud:rax
+    #- clustering
+    #- database
+    #- database:nosql
+    #- database:sql
+    #- development
+    #- monitoring
+    #- networking
+    #- packaging
+    #- system
+    #- web
+dependencies: []
+

@@ -1,0 +1,7 @@
+---
+# If set to true, install additional software
+install_extra: false
+
+# Packages that are installed in addition to everythings else.
+# Use this variable to add packages on a per-host basis.
+host_pakgs: []

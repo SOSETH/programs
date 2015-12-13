@@ -1,0 +1,18 @@
+---
+- name: load package list variables
+  include_vars: all.yml
+
+- name: install host-specific programs
+  apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
+  with_items: host_pkgs
+
+- name: install programs
+  apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
+  with_item: pkgs
+
+- name: install extra programs
+  apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
+  with_item: extra_pkgs
+  when: install_extra
+
+- meta: flush_handlers

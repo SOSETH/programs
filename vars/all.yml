@@ -1,0 +1,9 @@
+---
+pkgs:
+  # Shell programs
+  - coreutils
+
+  # Misc administration programs
+  - atop
+  - htop
+  - iotop

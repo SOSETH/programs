@@ -8,11 +8,11 @@
 
 - name: install programs
   apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
-  with_item: pkgs
+  with_items: pkgs
 
 - name: install extra programs
   apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
-  with_item: extra_pkgs
+  with_items: extra_pkgs
   when: install_extra
 
 - meta: flush_handlers

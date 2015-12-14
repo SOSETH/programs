@@ -6,4 +6,13 @@ pkgs:
   # Misc administration programs
   - atop
   - htop
+  - iftop
   - iotop
+  - lshw
+  - lsof
+
+  # Disk-/file-related programs
+  - cstream
+  - hdparm
+  - smartmontools
+

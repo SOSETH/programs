@@ -10,6 +10,10 @@
   apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
   with_items: pkgs
 
+- name: install programs without recommneded packages
+  apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800 install_recommends=no
+  with_items: pkgs_without_recommends
+
 - name: install extra programs
   apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
   with_items: extra_pkgs

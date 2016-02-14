@@ -2,6 +2,9 @@
 pkgs:
   # Shell programs
   - coreutils
+  - bash-completion
+
+  - vim
 
   # Misc administration programs
   - atop

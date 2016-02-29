@@ -18,5 +18,7 @@ pkgs:
   - cstream
   - hdparm
 
+  - dbus
+
 pkgs_without_recommends:
   - smartmontools  # Would install exim. We don't want this for sure

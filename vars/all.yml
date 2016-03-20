@@ -6,6 +6,8 @@ pkgs:
 
   - vim
 
+  - ncdu
+
   # Misc administration programs
   - atop
   - htop
@@ -13,10 +15,12 @@ pkgs:
   - iotop
   - lshw
   - lsof
+  - nmon
 
   # Disk-/file-related programs
   - cstream
   - hdparm
+  - fio
 
   - dbus
 

@@ -16,6 +16,7 @@ pkgs:
   - lshw
   - lsof
   - nmon
+  - telnet
 
   # Disk-/file-related programs
   - cstream

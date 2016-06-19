@@ -3,20 +3,37 @@
   include_vars: all.yml
 
 - name: install host-specific programs
-  apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
-  with_items: '{{host_pkgs}}'
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+    cache_valid_time: 1800
+  with_items: "{{ host_pkgs }}"
 
 - name: install programs
-  apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
-  with_items: '{{pkgs}}'
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+    cache_valid_time: 1800
+  with_items: "{{ pkgs }}"
 
 - name: install programs without recommended packages
-  apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800 install_recommends=no
-  with_items: '{{pkgs_without_recommends}}'
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+    cache_valid_time: 1800
+    install_recommends: no
+  with_items: "{{ pkgs_without_recommends }}"
 
 - name: install extra programs
-  apt: name={{ item }} state=present update_cache=yes cache_valid_time=1800
-  with_items: '{{pkgs_extra}}'
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+    cache_valid_time: 1800
+  with_items: "{{ pkgs_extra }}"
   when: install_extra
 
 - meta: flush_handlers

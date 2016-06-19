@@ -25,5 +25,6 @@ galaxy_info:
     #- packaging
     #- system
     #- web
-dependencies: []
+dependencies:
+  - apt
 

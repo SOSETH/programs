@@ -22,6 +22,7 @@ pkgs:
   - cstream
   - hdparm
   - fio
+  - rsync
 
   - dbus
 

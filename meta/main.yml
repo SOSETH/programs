@@ -5,7 +5,7 @@ galaxy_info:
   company: sos.ethz.ch
   # issue_tracker_url: 
   license: All rights reserved.
-  min_ansible_version: 1.9.1
+  min_ansible_version: 2.0
   platforms:
     - name: Debian
       versions:

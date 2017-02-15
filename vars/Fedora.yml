@@ -1,0 +1,29 @@
+---
+pkgs:
+  # Shell programs
+  - coreutils
+  - bash-completion
+
+  - vim
+
+  - ncdu
+
+  # Misc administration programs
+  - atop
+  - htop
+  - iftop
+  - iotop
+  - lshw
+  - lsof
+  - nmon
+  - telnet
+
+  # Disk-/file-related programs
+  - cstream
+  - hdparm
+  - fio
+  - rsync
+
+  - dbus
+
+  - smartmontools

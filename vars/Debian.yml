@@ -1,4 +1,6 @@
 ---
+pkgs_remove:
+
 pkgs:
   # Shell programs
   - coreutils

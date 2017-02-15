@@ -1,4 +1,7 @@
 ---
+pkgs_remove:
+  - vim-minimal
+  
 pkgs:
   # Shell programs
   - coreutils

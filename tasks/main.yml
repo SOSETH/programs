@@ -13,7 +13,7 @@
     name: "{{ item }}"
     state: absent
   with_items: "{{ pkgs_remove }}"
-  
+
 - name: install programs
   package:
     name: "{{ item }}"

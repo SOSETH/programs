@@ -1,5 +1,5 @@
 ---
-pkgs_remove:
+pkgs_remove: []
 
 pkgs:
   # Shell programs

@@ -7,3 +7,6 @@ pkgs_extra: []
 # Packages that are installed in addition to everythings else.
 # Use this variable to add packages on a per-host basis.
 host_pkgs: []
+
+# Packages that should not be installed on this host
+host_pkg_blacklist: []

@@ -1,0 +1,32 @@
+---
+pkgs_remove: []
+
+pkgs:
+  # Shell programs
+  - coreutils
+  - bash-completion
+
+  - vim
+
+  - ncdu
+
+  # Misc administration programs
+  - atop
+  - htop
+  - iftop
+  - iotop
+  - lshw
+  - lsof
+  - nmon
+  - telnet
+
+  # Disk-/file-related programs
+  - cstream
+  - hdparm
+  - fio
+  - rsync
+
+  - dbus
+
+pkgs_without_recommends:
+  - smartmontools  # Would install exim. We don't want this for sure

@@ -5,39 +5,34 @@
 - name: install host-specific programs
   become: True
   package:
-    name: "{{ item }}"
+    name: "{{ host_pkgs }}"
     state: present
-  with_items: "{{ host_pkgs }}"
 
 - name: remove programs
   become: True
   package:
-    name: "{{ item }}"
+    name: "{{ pkgs_remove }}"
     state: absent
-  with_items: "{{ pkgs_remove }}"
 
 - name: install programs
   become: True
   package:
-    name: "{{ item }}"
+    name: "{{ pkgs|difference(host_pkg_blacklist) }}"
     state: present
-  with_items: "{{ pkgs|difference(host_pkg_blacklist) }}"
 
 - name: install programs without recommended packages
   become: True
   apt:
-    name: "{{ item }}"
+    name: "{{ pkgs_without_recommends|difference(host_pkg_blacklist) }}"
     state: present
     update_cache: yes
     cache_valid_time: 1800
     install_recommends: no
-  with_items: "{{ pkgs_without_recommends|difference(host_pkg_blacklist) }}"
   when: ansible_os_family == "Debian"
 
 - name: install extra programs
   become: True
   package:
-    name: "{{ item }}"
+    name: "{{ pkgs_extra }}"
     state: present
-  with_items: "{{ pkgs_extra }}"
   when: install_extra

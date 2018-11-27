@@ -2,6 +2,11 @@
 - name: load package list variables
   include_vars: "{{ ansible_distribution }}.yml"
 
+- name: build blacklist for VM guests
+  set_fact:
+    host_pkg_blacklist: "{{ host_pkg_blacklist + pkgs_vm_guest_blacklist }}"
+  when: ansible_virtualization_role == "guest"
+
 - name: install host-specific programs
   become: True
   package:

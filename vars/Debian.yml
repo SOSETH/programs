@@ -30,3 +30,6 @@ pkgs:
 
 pkgs_without_recommends:
   - smartmontools  # Would install exim. We don't want this for sure
+
+pkgs_vm_guest_blacklist:
+  - smartmontools

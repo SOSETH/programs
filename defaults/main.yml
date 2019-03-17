@@ -1,6 +1,6 @@
 ---
-# If set to true, install additional software
-install_extra: false
+# If set to True, install additional software
+install_extra: False
 
 pkgs_extra: []
 
@@ -10,3 +10,6 @@ host_pkgs: []
 
 # Packages that should not be installed on this host
 host_pkg_blacklist: []
+
+# Packages that shouldn't get installed on a VM. They will be removed.
+pkgs_vm_guest_blacklist: []

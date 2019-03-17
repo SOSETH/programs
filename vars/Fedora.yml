@@ -30,3 +30,6 @@ pkgs:
   - dbus
 
   - smartmontools
+
+pkgs_vm_guest_blacklist:
+  - smartmontools

@@ -21,9 +21,6 @@ pkgs:
   - telnet
 
   # Disk-/file-related programs
-  - cstream
-  - hdparm
-  - fio
   - rsync
 
   - dbus

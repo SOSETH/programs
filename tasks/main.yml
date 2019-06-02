@@ -40,4 +40,4 @@
   package:
     name: "{{ pkgs_extra }}"
     state: present
-  when: install_extra
+  when: install_extra | bool

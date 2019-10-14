@@ -34,10 +34,3 @@
     cache_valid_time: 1800
     install_recommends: no
   when: ansible_os_family == "Debian"
-
-- name: install extra programs
-  become: True
-  package:
-    name: "{{ pkgs_extra }}"
-    state: present
-  when: install_extra | bool

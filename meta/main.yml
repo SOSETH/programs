@@ -9,11 +9,12 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - stretch
         - buster
+        - bullseye
     - name: Fedora
       versions:
-        - 30
+        - 36
+        - 37
   categories:
     - system
 

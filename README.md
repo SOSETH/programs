@@ -7,9 +7,8 @@ Install basic applications which don't need any special configuration
 * `host_pkgs` List of host specific packages
 
 **Compatibility tested with:**
- * Debian 9
- * Debian 10
- * Fedora 30 Server
+ * Debian 11
+ * Fedora 37
 
 ## License
 GPLv3

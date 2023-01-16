@@ -19,14 +19,12 @@ pkgs:
   - lshw
   - lsof
   - nmon
-  - telnet
 
   # Disk-/file-related programs
   - rsync
 
-  - dbus
-
   - smartmontools
 
 pkgs_vm_guest_blacklist:
+  - lshw
   - smartmontools

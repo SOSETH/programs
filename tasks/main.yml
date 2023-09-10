@@ -1,36 +1,36 @@
 ---
-- name: load package list variables
-  include_vars: "{{ ansible_distribution }}.yml"
+- name: Load package list variables
+  ansible.builtin.include_vars: "{{ ansible_distribution }}.yml"
 
-- name: build blacklist for VM guests
-  set_fact:
+- name: Build blacklist for VM guests
+  ansible.builtin.set_fact:
     host_pkg_blacklist: "{{ host_pkg_blacklist + pkgs_vm_guest_blacklist }}"
   when: ansible_virtualization_role == "guest"
 
-- name: install host-specific programs
-  become: True
-  package:
+- name: Install host-specific programs
+  become: true
+  ansible.builtin.package:
     name: "{{ host_pkgs }}"
     state: present
 
-- name: remove programs
-  become: True
-  package:
+- name: Remove programs
+  become: true
+  ansible.builtin.package:
     name: "{{ pkgs_remove }}"
     state: absent
 
-- name: install programs
-  become: True
-  package:
-    name: "{{ pkgs|difference(host_pkg_blacklist) }}"
+- name: Install programs
+  become: true
+  ansible.builtin.package:
+    name: "{{ pkgs | difference(host_pkg_blacklist) }}"
     state: present
 
-- name: install programs without recommended packages
-  become: True
-  apt:
-    name: "{{ pkgs_without_recommends|difference(host_pkg_blacklist) }}"
+- name: Install programs without recommended packages
+  become: true
+  ansible.builtin.apt:
+    name: "{{ pkgs_without_recommends | difference(host_pkg_blacklist) }}"
     state: present
-    update_cache: yes
+    update_cache: true
     cache_valid_time: 1800
-    install_recommends: no
+    install_recommends: false
   when: ansible_os_family == "Debian"
